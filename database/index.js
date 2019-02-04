@@ -4,7 +4,8 @@ let mysql = require('mysql');
 let connection = mysql.createConnection({
     host:'localhost',
     user:'student',
-    password:'student'
+    password:'student',
+    database: 'todos'
 });
 
 connection.connect((err) => {
@@ -15,4 +16,4 @@ connection.connect((err) => {
     }
 })
 
-module.exports.connection = connection;
+module.exports = connection;
